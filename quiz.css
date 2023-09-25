@@ -1,0 +1,80 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  background-color: #575955;
+}
+
+h1 {
+  text-align: center;
+}
+
+#colorSample {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.answer {
+  width: 500px;
+  font-size: 2em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: thin solid black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 30px; /*Puts space above boxes*/
+}
+
+
+
+  /* Styles for the lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    #lightbox-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #playAgain {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #home {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+
+

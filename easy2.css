@@ -1,0 +1,354 @@
+
+/*Desktop sizing mode. Will stay side and side until sized down to 600px then switches down to mobile.*/
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  color: #333333;
+  text-align: center;
+}
+
+h1 {
+    text-align: top;
+  font-size: 4em;
+  color: #333333;
+  background-color: #D5DBDB;
+  padding: 20px;
+  border-radius: 60px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width for the content */
+    margin: 20px; /* Add some margin for spacing */
+}
+
+#colorSample {
+    flex: 1; /* Take up available space */
+    height: auto;
+    background-color: #266594;
+    font-size: 3em;
+    padding: 10px;
+    text-align: center;
+    margin-right: 50px;
+   border: 4px solid black; /* Border */
+    text-align: center;
+  color: white;
+}
+
+.answers {  /*THE DIV*/
+    flex: 2; /* Take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Make it take up the full height */
+}
+
+.answer { /*The actual answers*/
+    width: 90%; /* Take up full width */
+    font-size: 2em;
+    border: thin solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0; /* Adjust vertical margin for spacing between buttons */
+    background-color: #3498db;
+    border-radius: 25px;
+  height: 30px;
+  
+}
+
+
+.answer:hover{
+  cursor: pointer;
+  background-color: #2977ab;
+}
+
+
+.score {
+    width: 100%; /* Take up full width */
+    font-size: 2em;
+    border: thin solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0; /* Adjust vertical margin for spacing between buttons */
+  background-color: #3498db;
+   border-radius: 25px;
+}
+
+
+
+/* Styles for the lightbox (no changes) */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /*transparent color*/
+    text-align: center;
+}
+
+#lightbox-content {
+    background-color: #0E3B43;
+    font-size: 3em;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  
+}
+
+#playAgain {
+    margin: 20px; /* spacing*/
+    padding: 10px 20px;
+    background-color: #357266; /*green*/
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+  
+}
+
+#playAgain:hover{
+      margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #234d44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#home {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #A9CEF4;/*ight blue*/
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#home:hover {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #7d96b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*Message inside of lightbox*/
+#message{
+  font-family: helvetica, arial, sans-serif;
+  margin: 50px;
+  
+  
+}
+
+
+
+
+.score-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*MOBILE CSS SIZING 600px max width till it changes from destop to mobile*/
+@media only screen and (max-width: 600px) {
+  body {
+    font-family: helvetica, arial, sans-serif;
+    background-color: #F0F0F0;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: auto;
+    color: #333333;
+    
+    
+  }
+
+  
+  header{
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px; 
+     color: #333333;
+  }
+
+  .container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center; /*make it stacked*/
+    margin: auto;
+  }
+  
+  
+  
+  .wrapper{
+     text-align: center;
+    flex-direction: column;
+    align-items: center; /*stacked*/
+  }
+
+  
+  /*Color*/
+  #colorSample {
+    width: 50%;
+    height: 50%;
+    background-color: #266594;
+    font-size: 3em;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    border: 4px solid black; /* Border for colour*/
+  }
+
+  .answers { /*DIV*/
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center up and dwn*/
+    justify-content: center;
+  }
+
+  .answer {/*actual buttons*/
+    
+    font-size: 3em;
+    border: thin solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0; /* Adjust vertical margin for spacing between buttons */
+    background-color: #3498db;
+    border-radius: 25px;
+  }
+
+  .answer:hover {
+    cursor: pointer;
+    background-color: #2977ab;
+  }
+  
+  
+
+
+  .score-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add margin for spacing */
+  }
+
+  .score {
+    font-size: 24px;
+  }
+
+  /* Styles for the lightbox */
+  #lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+
+  #lightbox-content {
+      background-color: #0E3B43;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  /*play again button in lightbox*/
+
+  #playAgain {
+    margin-top: 20px; /* Adjust margin for spacing */
+    padding: 10px 20px;
+    background-color: #357266; /*green*/
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+   width: 100%;
+    height: auto;
+    font-size: 20px;
+    
+  }
+
+  #playAgain:hover {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #234d44;
+  }
+
+  
+  
+  /*home button in lightbox*/
+  #home {
+    margin-top: 20px; /* Adjust margin for spacing */
+    padding: 10px 20px;
+    background-color: #A9CEF4;/*ight blue*/
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+     font-size: 20px;
+  }
+
+  #home:hover {
+    margin-top: 20px;
+    padding: 10px 20px;
+  background-color: #7d96b0;
+  }
+
+  /* Message inside of lightbox */
+  #message {
+    font-family: helvetica, arial, sans-serif;
+    margin: 10px; /* Adjust margin for spacing */
+    font-size: 3vh;
+  }
+}

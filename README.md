@@ -1,2 +1,1 @@
-# Hexicode
-Hexidecimal game
+A simple hexadecimal color code game.
